@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */; };
+		0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */; };
+		0C42BDA529DCAF9B00BA0ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42BDA429DCAF9B00BA0ADB /* Assets.xcassets */; };
+		0C42BDA829DCAF9B00BA0ADB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42BDA729DCAF9B00BA0ADB /* Preview Assets.xcassets */; };
+		0C42BDB329DCAF9B00BA0ADB /* RaccacoonieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDB229DCAF9B00BA0ADB /* RaccacoonieTests.swift */; };
+		0C42BDBD29DCAF9B00BA0ADB /* RaccacoonieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDBC29DCAF9B00BA0ADB /* RaccacoonieUITests.swift */; };
+		0C42BDBF29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDBE29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C42BDAF29DCAF9B00BA0ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C42BD9529DCAF9A00BA0ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C42BD9C29DCAF9A00BA0ADB;
+			remoteInfo = Raccacoonie;
+		};
+		0C42BDB929DCAF9B00BA0ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C42BD9529DCAF9A00BA0ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C42BD9C29DCAF9A00BA0ADB;
+			remoteInfo = Raccacoonie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C42BD9D29DCAF9A00BA0ADB /* Raccacoonie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raccacoonie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieApp.swift; sourceTree = "<group>"; };
+		0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C42BDA429DCAF9B00BA0ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C42BDA729DCAF9B00BA0ADB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0C42BDA929DCAF9B00BA0ADB /* Raccacoonie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Raccacoonie.entitlements; sourceTree = "<group>"; };
+		0C42BDAE29DCAF9B00BA0ADB /* RaccacoonieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaccacoonieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C42BDB229DCAF9B00BA0ADB /* RaccacoonieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieTests.swift; sourceTree = "<group>"; };
+		0C42BDB829DCAF9B00BA0ADB /* RaccacoonieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaccacoonieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C42BDBC29DCAF9B00BA0ADB /* RaccacoonieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieUITests.swift; sourceTree = "<group>"; };
+		0C42BDBE29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C42BD9A29DCAF9A00BA0ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C42BDAB29DCAF9B00BA0ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C42BDB529DCAF9B00BA0ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C42BD9429DCAF9A00BA0ADB = {
+			isa = PBXGroup;
+			children = (
+				0C42BD9F29DCAF9A00BA0ADB /* Raccacoonie */,
+				0C42BDB129DCAF9B00BA0ADB /* RaccacoonieTests */,
+				0C42BDBB29DCAF9B00BA0ADB /* RaccacoonieUITests */,
+				0C42BD9E29DCAF9A00BA0ADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C42BD9E29DCAF9A00BA0ADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C42BD9D29DCAF9A00BA0ADB /* Raccacoonie.app */,
+				0C42BDAE29DCAF9B00BA0ADB /* RaccacoonieTests.xctest */,
+				0C42BDB829DCAF9B00BA0ADB /* RaccacoonieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C42BD9F29DCAF9A00BA0ADB /* Raccacoonie */ = {
+			isa = PBXGroup;
+			children = (
+				0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */,
+				0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */,
+				0C42BDA429DCAF9B00BA0ADB /* Assets.xcassets */,
+				0C42BDA929DCAF9B00BA0ADB /* Raccacoonie.entitlements */,
+				0C42BDA629DCAF9B00BA0ADB /* Preview Content */,
+			);
+			path = Raccacoonie;
+			sourceTree = "<group>";
+		};
+		0C42BDA629DCAF9B00BA0ADB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0C42BDA729DCAF9B00BA0ADB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0C42BDB129DCAF9B00BA0ADB /* RaccacoonieTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C42BDB229DCAF9B00BA0ADB /* RaccacoonieTests.swift */,
+			);
+			path = RaccacoonieTests;
+			sourceTree = "<group>";
+		};
+		0C42BDBB29DCAF9B00BA0ADB /* RaccacoonieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C42BDBC29DCAF9B00BA0ADB /* RaccacoonieUITests.swift */,
+				0C42BDBE29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift */,
+			);
+			path = RaccacoonieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C42BD9C29DCAF9A00BA0ADB /* Raccacoonie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C42BDC229DCAF9B00BA0ADB /* Build configuration list for PBXNativeTarget "Raccacoonie" */;
+			buildPhases = (
+				0C42BD9929DCAF9A00BA0ADB /* Sources */,
+				0C42BD9A29DCAF9A00BA0ADB /* Frameworks */,
+				0C42BD9B29DCAF9A00BA0ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Raccacoonie;
+			productName = Raccacoonie;
+			productReference = 0C42BD9D29DCAF9A00BA0ADB /* Raccacoonie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C42BDAD29DCAF9B00BA0ADB /* RaccacoonieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C42BDC529DCAF9B00BA0ADB /* Build configuration list for PBXNativeTarget "RaccacoonieTests" */;
+			buildPhases = (
+				0C42BDAA29DCAF9B00BA0ADB /* Sources */,
+				0C42BDAB29DCAF9B00BA0ADB /* Frameworks */,
+				0C42BDAC29DCAF9B00BA0ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C42BDB029DCAF9B00BA0ADB /* PBXTargetDependency */,
+			);
+			name = RaccacoonieTests;
+			productName = RaccacoonieTests;
+			productReference = 0C42BDAE29DCAF9B00BA0ADB /* RaccacoonieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C42BDB729DCAF9B00BA0ADB /* RaccacoonieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C42BDC829DCAF9B00BA0ADB /* Build configuration list for PBXNativeTarget "RaccacoonieUITests" */;
+			buildPhases = (
+				0C42BDB429DCAF9B00BA0ADB /* Sources */,
+				0C42BDB529DCAF9B00BA0ADB /* Frameworks */,
+				0C42BDB629DCAF9B00BA0ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C42BDBA29DCAF9B00BA0ADB /* PBXTargetDependency */,
+			);
+			name = RaccacoonieUITests;
+			productName = RaccacoonieUITests;
+			productReference = 0C42BDB829DCAF9B00BA0ADB /* RaccacoonieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C42BD9529DCAF9A00BA0ADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					0C42BD9C29DCAF9A00BA0ADB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0C42BDAD29DCAF9B00BA0ADB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C42BD9C29DCAF9A00BA0ADB;
+					};
+					0C42BDB729DCAF9B00BA0ADB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C42BD9C29DCAF9A00BA0ADB;
+					};
+				};
+			};
+			buildConfigurationList = 0C42BD9829DCAF9A00BA0ADB /* Build configuration list for PBXProject "Raccacoonie" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C42BD9429DCAF9A00BA0ADB;
+			productRefGroup = 0C42BD9E29DCAF9A00BA0ADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C42BD9C29DCAF9A00BA0ADB /* Raccacoonie */,
+				0C42BDAD29DCAF9B00BA0ADB /* RaccacoonieTests */,
+				0C42BDB729DCAF9B00BA0ADB /* RaccacoonieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C42BD9B29DCAF9A00BA0ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C42BDA829DCAF9B00BA0ADB /* Preview Assets.xcassets in Resources */,
+				0C42BDA529DCAF9B00BA0ADB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C42BDAC29DCAF9B00BA0ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C42BDB629DCAF9B00BA0ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C42BD9929DCAF9A00BA0ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */,
+				0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C42BDAA29DCAF9B00BA0ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C42BDB329DCAF9B00BA0ADB /* RaccacoonieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C42BDB429DCAF9B00BA0ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C42BDBF29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift in Sources */,
+				0C42BDBD29DCAF9B00BA0ADB /* RaccacoonieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C42BDB029DCAF9B00BA0ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C42BD9C29DCAF9A00BA0ADB /* Raccacoonie */;
+			targetProxy = 0C42BDAF29DCAF9B00BA0ADB /* PBXContainerItemProxy */;
+		};
+		0C42BDBA29DCAF9B00BA0ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C42BD9C29DCAF9A00BA0ADB /* Raccacoonie */;
+			targetProxy = 0C42BDB929DCAF9B00BA0ADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C42BDC029DCAF9B00BA0ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C42BDC129DCAF9B00BA0ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0C42BDC329DCAF9B00BA0ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Raccacoonie/Raccacoonie.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Raccacoonie/Preview Content\"";
+				DEVELOPMENT_TEAM = HKRPDMYH64;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.Raccacoonie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0C42BDC429DCAF9B00BA0ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Raccacoonie/Raccacoonie.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Raccacoonie/Preview Content\"";
+				DEVELOPMENT_TEAM = HKRPDMYH64;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.Raccacoonie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0C42BDC629DCAF9B00BA0ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKRPDMYH64;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.RaccacoonieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raccacoonie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Raccacoonie";
+			};
+			name = Debug;
+		};
+		0C42BDC729DCAF9B00BA0ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKRPDMYH64;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.RaccacoonieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Raccacoonie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Raccacoonie";
+			};
+			name = Release;
+		};
+		0C42BDC929DCAF9B00BA0ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKRPDMYH64;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.RaccacoonieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Raccacoonie;
+			};
+			name = Debug;
+		};
+		0C42BDCA29DCAF9B00BA0ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKRPDMYH64;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.RaccacoonieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Raccacoonie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C42BD9829DCAF9A00BA0ADB /* Build configuration list for PBXProject "Raccacoonie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C42BDC029DCAF9B00BA0ADB /* Debug */,
+				0C42BDC129DCAF9B00BA0ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C42BDC229DCAF9B00BA0ADB /* Build configuration list for PBXNativeTarget "Raccacoonie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C42BDC329DCAF9B00BA0ADB /* Debug */,
+				0C42BDC429DCAF9B00BA0ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C42BDC529DCAF9B00BA0ADB /* Build configuration list for PBXNativeTarget "RaccacoonieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C42BDC629DCAF9B00BA0ADB /* Debug */,
+				0C42BDC729DCAF9B00BA0ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C42BDC829DCAF9B00BA0ADB /* Build configuration list for PBXNativeTarget "RaccacoonieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C42BDC929DCAF9B00BA0ADB /* Debug */,
+				0C42BDCA29DCAF9B00BA0ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C42BD9529DCAF9A00BA0ADB /* Project object */;
+}
