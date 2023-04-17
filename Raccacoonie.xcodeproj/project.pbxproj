@@ -13,6 +13,7 @@
 		0C144A1429EDB33E005F4747 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
 		0C144A1729EDB3BD005F4747 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* WidgetView.swift */; };
 		0C144A1829EDB493005F4747 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A529E50C990048C761 /* ImageView.swift */; };
+		0C144A1C29EDC4EE005F4747 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* WidgetView.swift */; };
 		0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */; };
 		0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */; };
 		0C42BDA529DCAF9B00BA0ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42BDA429DCAF9B00BA0ADB /* Assets.xcassets */; };
@@ -421,6 +422,7 @@
 				0C144A1129EDB0CF005F4747 /* CCCAlbum.swift in Sources */,
 				0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */,
 				0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */,
+				0C144A1C29EDC4EE005F4747 /* WidgetView.swift in Sources */,
 				0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */,
 				0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */,
 			);

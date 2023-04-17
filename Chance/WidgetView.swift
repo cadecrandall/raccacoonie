@@ -14,8 +14,7 @@ struct WidgetView: View {
         VStack {
             Text(track.name)
             Text(track.artist)
-//            ImageView(imageUrl: track.album.coverUrl)
-            Image("vw")
+            ImageView(imageUrl: track.album.coverUrl)
             Text(track.album.name)
         }
     }

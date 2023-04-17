@@ -12,8 +12,8 @@ struct ImageView: View {
     let imageUrl: URL
     
     var body: some View {
-        AsyncImage(url: imageUrl) { image in
-            image.resizable()
+        AsyncImage(url: imageUrl) { image in 
+            image
         } placeholder: {
             ProgressView()
         }        
