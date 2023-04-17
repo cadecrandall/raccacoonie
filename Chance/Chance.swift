@@ -11,12 +11,12 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent(), view: WidgetView(track: SpotifyWrapper.random()))
+        SimpleEntry(date: Date(), configuration: ConfigurationIntent(), track: SpotifyWrapper.random())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         // this is what shows up in the widget gallery
-        let entry = SimpleEntry(date: Date(), configuration: configuration, view: WidgetView(track: SpotifyWrapper.random()))
+        let entry = SimpleEntry(date: Date(), configuration: configuration, track: SpotifyWrapper.random())
         completion(entry)
     }
 
@@ -27,7 +27,7 @@ struct Provider: IntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration, view: WidgetView(track: SpotifyWrapper.random()))
+            let entry = SimpleEntry(date: entryDate, configuration: configuration, track: SpotifyWrapper.random())
             entries.append(entry)
         }
 
@@ -39,15 +39,14 @@ struct Provider: IntentTimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
-//    let track: CCCTrack
-    let view: WidgetView
+    let track: CCCTrack
 }
 
 struct ChanceEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        entry.view
+        WidgetView(track: entry.track)
     }
 }
 
