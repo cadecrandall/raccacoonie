@@ -118,6 +118,52 @@ class ViewModel: ObservableObject {
         
     }
     
+    func getCurrentTrack() -> CCCTrack? {
+        
+        //        var currentPlayback = spotify.currentPlayback()
+        //            .sink(receiveCompletion: self.receiveRecentlyPlayedCompletion(_:),
+        //                  receiveValue: { value in
+        //                print("the value is\(value)")
+        //            })
+        //
+        //        print("print2 \(currentPlayback)")
+        //        return nil
+        print("Called get current track")
+        
+        var currentPlayback = spotify
+            .currentPlayback()
+            .receive(on: RunLoop.main)
+            .sink(
+                receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        print("Playback completed successfully.")
+                    case .failure(let error):
+                        print("An error occurred during playback: \(error.localizedDescription)")
+                    }
+                },
+                receiveValue: { playbackContext in
+                    guard let context = playbackContext else {
+                        print("No playback context available.")
+                        return
+                    }
+                    
+                    print("The current playback context is: \(context)")
+                }
+            )
+        
+        print("currentPlayback is \(currentPlayback)")
+        return nil
+    }
+    
+    func receiveRecentlyPlayedCompletion(
+        _ completion: Subscribers.Completion<Error>
+    ) {
+        if case .failure(let error) = completion {
+            let title = "Couldn't retrieve recently played tracks"
+            print("\(title): \(error)")
+        }
+    }
     
     
 }
