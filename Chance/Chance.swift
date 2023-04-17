@@ -11,11 +11,12 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date(), configuration: ConfigurationIntent(), view: WidgetView(track: SpotifyWrapper.random()))
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+        // this is what shows up in the widget gallery
+        let entry = SimpleEntry(date: Date(), configuration: configuration, view: WidgetView(track: SpotifyWrapper.random()))
         completion(entry)
     }
 
@@ -26,7 +27,7 @@ struct Provider: IntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = SimpleEntry(date: entryDate, configuration: configuration, view: WidgetView(track: SpotifyWrapper.random()))
             entries.append(entry)
         }
 
@@ -38,13 +39,15 @@ struct Provider: IntentTimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationIntent
+//    let track: CCCTrack
+    let view: WidgetView
 }
 
 struct ChanceEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        entry.view
     }
 }
 
@@ -56,14 +59,15 @@ struct Chance: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             ChanceEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Chance Extension")
+        .description("Display current Spotify status in the Notification Center, native to macOS.")
     }
 }
+//
+//struct Chance_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ChanceEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent(), track: SpotifyWrapper.random()))
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//    }
+//}
 
-struct Chance_Previews: PreviewProvider {
-    static var previews: some View {
-        ChanceEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}

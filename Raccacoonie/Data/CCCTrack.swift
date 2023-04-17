@@ -10,7 +10,10 @@ import Foundation
 struct CCCTrack {
     let name: String
     let artist: String
+    let album: CCCAlbum
     let uri: String?
-    let id: String?
+    let id = UUID()
     
+
 }
+

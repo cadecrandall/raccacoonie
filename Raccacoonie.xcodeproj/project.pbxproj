@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C144A1129EDB0CF005F4747 /* CCCAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */; };
+		0C144A1229EDB339005F4747 /* CCCTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* CCCTrack.swift */; };
+		0C144A1329EDB33B005F4747 /* CCCAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */; };
+		0C144A1429EDB33E005F4747 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
+		0C144A1729EDB3BD005F4747 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* WidgetView.swift */; };
+		0C144A1829EDB493005F4747 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A529E50C990048C761 /* ImageView.swift */; };
 		0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */; };
 		0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */; };
 		0C42BDA529DCAF9B00BA0ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42BDA429DCAF9B00BA0ADB /* Assets.xcassets */; };
@@ -17,7 +23,8 @@
 		0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A329E50B650048C761 /* ViewModel.swift */; };
 		0C4A66A629E50C990048C761 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A529E50C990048C761 /* ImageView.swift */; };
 		0C70B94C29ECBAE300483322 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C70B94B29ECBAE300483322 /* SpotifyAPI */; };
-		0C70B94F29ECD56A00483322 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* Track.swift */; };
+		0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* CCCTrack.swift */; };
+		0C70B95129ECF1C500483322 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
 		0C93C6AC29DF9B1300C0BE6B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C93C6AB29DF9B1200C0BE6B /* WidgetKit.framework */; };
 		0C93C6AE29DF9B1300C0BE6B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C93C6AD29DF9B1300C0BE6B /* SwiftUI.framework */; };
 		0C93C6B129DF9B1300C0BE6B /* Chance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C6B029DF9B1300C0BE6B /* Chance.swift */; };
@@ -66,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCAlbum.swift; sourceTree = "<group>"; };
+		0C144A1529EDB3B6005F4747 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		0C42BD9D29DCAF9A00BA0ADB /* Raccacoonie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raccacoonie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieApp.swift; sourceTree = "<group>"; };
 		0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,7 +89,8 @@
 		0C4A66A329E50B650048C761 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0C4A66A529E50C990048C761 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		0C70B94D29ECC4A100483322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		0C70B94E29ECD56A00483322 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		0C70B94E29ECD56A00483322 /* CCCTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCTrack.swift; sourceTree = "<group>"; };
+		0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWrapper.swift; sourceTree = "<group>"; };
 		0C93C6A929DF9B1200C0BE6B /* ChanceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChanceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93C6AB29DF9B1200C0BE6B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0C93C6AD29DF9B1300C0BE6B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -193,7 +203,9 @@
 		0C4A66A029E50B140048C761 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0C70B94E29ECD56A00483322 /* Track.swift */,
+				0C70B94E29ECD56A00483322 /* CCCTrack.swift */,
+				0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */,
+				0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -227,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				0C93C6B029DF9B1300C0BE6B /* Chance.swift */,
+				0C144A1529EDB3B6005F4747 /* WidgetView.swift */,
 				0C93C6B229DF9B1300C0BE6B /* Chance.intentdefinition */,
 				0C93C6B329DF9B1400C0BE6B /* Assets.xcassets */,
 				0C93C6B529DF9B1400C0BE6B /* Info.plist */,
@@ -402,12 +415,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C70B95129ECF1C500483322 /* SpotifyWrapper.swift in Sources */,
 				0C4A66A629E50C990048C761 /* ImageView.swift in Sources */,
 				0C93C6B829DF9B1400C0BE6B /* Chance.intentdefinition in Sources */,
+				0C144A1129EDB0CF005F4747 /* CCCAlbum.swift in Sources */,
 				0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */,
 				0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */,
 				0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */,
-				0C70B94F29ECD56A00483322 /* Track.swift in Sources */,
+				0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,8 +447,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C144A1729EDB3BD005F4747 /* WidgetView.swift in Sources */,
 				0C93C6B729DF9B1400C0BE6B /* Chance.intentdefinition in Sources */,
 				0C93C6B129DF9B1300C0BE6B /* Chance.swift in Sources */,
+				0C144A1229EDB339005F4747 /* CCCTrack.swift in Sources */,
+				0C144A1429EDB33E005F4747 /* SpotifyWrapper.swift in Sources */,
+				0C144A1829EDB493005F4747 /* ImageView.swift in Sources */,
+				0C144A1329EDB33B005F4747 /* CCCAlbum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +532,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx13.1;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -565,7 +585,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx13.1;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -720,10 +740,11 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.Raccacoonie.Chance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx13.1;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -749,10 +770,11 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccc.Raccacoonie.Chance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx13.1;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
