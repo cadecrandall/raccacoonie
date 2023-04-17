@@ -29,6 +29,7 @@ class ViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
     
+    private var authUrl: URL? = nil
     
     func getAuthUrl() -> URL {
         // from https://github.com/Peter-Schorn/SpotifyAPIExampleApp/blob/main/SpotifyAPIExampleApp/Model/Spotify.swift
@@ -38,8 +39,11 @@ class ViewModel: ObservableObject {
         /// not an attacker. **This value is regenerated after each authorization**
         /// **process completes.**
         
+        if authUrl != nil {
+            return authUrl!
+        }
         
-        let url = spotify.authorizationManager.makeAuthorizationURL(
+        authUrl = spotify.authorizationManager.makeAuthorizationURL(
             redirectURI: loginCallbackURL,
             showDialog: true,
             state: authorizationState,
@@ -49,7 +53,7 @@ class ViewModel: ObservableObject {
             ]
         )!
         
-        return url
+        return authUrl!
     }
     
     func handleURL(_ url: URL) {
@@ -110,7 +114,7 @@ class ViewModel: ObservableObject {
         // MARK: each authorization request. This ensures an incoming redirect
         // MARK: from Spotify was the result of a request made by this app, and
         // MARK: and not an attacker.
-//        authorizationState = String.randomURLSafe(length: 128)
+        authorizationState = String.randomURLSafe(length: 128)
         
     }
     
