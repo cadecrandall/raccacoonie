@@ -17,6 +17,7 @@
 		0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A329E50B650048C761 /* ViewModel.swift */; };
 		0C4A66A629E50C990048C761 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A529E50C990048C761 /* ImageView.swift */; };
 		0C70B94C29ECBAE300483322 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C70B94B29ECBAE300483322 /* SpotifyAPI */; };
+		0C70B94F29ECD56A00483322 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* Track.swift */; };
 		0C93C6AC29DF9B1300C0BE6B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C93C6AB29DF9B1200C0BE6B /* WidgetKit.framework */; };
 		0C93C6AE29DF9B1300C0BE6B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C93C6AD29DF9B1300C0BE6B /* SwiftUI.framework */; };
 		0C93C6B129DF9B1300C0BE6B /* Chance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C6B029DF9B1300C0BE6B /* Chance.swift */; };
@@ -79,6 +80,7 @@
 		0C4A66A329E50B650048C761 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0C4A66A529E50C990048C761 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		0C70B94D29ECC4A100483322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0C70B94E29ECD56A00483322 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		0C93C6A929DF9B1200C0BE6B /* ChanceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChanceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C93C6AB29DF9B1200C0BE6B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0C93C6AD29DF9B1300C0BE6B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 		0C4A66A029E50B140048C761 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0C70B94E29ECD56A00483322 /* Track.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */,
 				0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */,
 				0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */,
+				0C70B94F29ECD56A00483322 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
