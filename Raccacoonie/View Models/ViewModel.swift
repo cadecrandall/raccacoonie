@@ -23,13 +23,47 @@ class ViewModel: ObservableObject {
     
     var authorizationState = String.randomURLSafe(length: 128)
     
-    var recentlyPlayed: [CCCTrack] = []
+    @Published var isAuthorized: Bool = false
+    @Published var currentTrack: CCCTrack = SpotifyWrapper.random()
     
     private var loadRecentlyPlayedCancellable: AnyCancellable? = nil
     
     private var cancellables: Set<AnyCancellable> = []
     
     private var authUrl: URL? = nil
+    
+    private var recentTrack: Track? = nil {
+        didSet {
+            guard let recentTrack else {
+                return
+            }
+            
+            let trackName = recentTrack.name
+            let artists = recentTrack.artists
+            let album = recentTrack.album
+            let uri = recentTrack.uri
+            
+            guard let artists else {
+                return
+            }
+            
+            guard let album else {
+                return
+            }
+            
+            guard let uri else {
+                return
+            }
+            
+            let cccAlbum = CCCAlbum(name: album.name, coverUrl: URL(string: "google.com")!, uri: album.uri!)
+            
+            currentTrack = CCCTrack(name: trackName,
+                                    artist: artists[0].name,
+                                    album: cccAlbum,
+                                    uri: uri)
+            print(currentTrack)
+        }
+    }
     
     func getAuthUrl() -> URL {
         // from https://github.com/Peter-Schorn/SpotifyAPIExampleApp/blob/main/SpotifyAPIExampleApp/Model/Spotify.swift
@@ -49,7 +83,8 @@ class ViewModel: ObservableObject {
             state: authorizationState,
             scopes: [
                 .userReadPlaybackState,
-                .userReadRecentlyPlayed
+                .userReadRecentlyPlayed,
+                .userReadCurrentlyPlaying
             ]
         )!
         
@@ -116,54 +151,72 @@ class ViewModel: ObservableObject {
         // MARK: and not an attacker.
         authorizationState = String.randomURLSafe(length: 128)
         
+        isAuthorized = true
+        
     }
     
     func getCurrentTrack() -> CCCTrack? {
-        
-        //        var currentPlayback = spotify.currentPlayback()
-        //            .sink(receiveCompletion: self.receiveRecentlyPlayedCompletion(_:),
-        //                  receiveValue: { value in
-        //                print("the value is\(value)")
-        //            })
-        //
-        //        print("print2 \(currentPlayback)")
-        //        return nil
         print("Called get current track")
         
-        var currentPlayback = spotify
-            .currentPlayback()
-            .receive(on: RunLoop.main)
-            .sink(
-                receiveCompletion: { completion in
-                    switch completion {
-                    case .finished:
-                        print("Playback completed successfully.")
-                    case .failure(let error):
-                        print("An error occurred during playback: \(error.localizedDescription)")
-                    }
-                },
-                receiveValue: { playbackContext in
-                    guard let context = playbackContext else {
-                        print("No playback context available.")
-                        return
-                    }
-                    
-                    print("The current playback context is: \(context)")
+        spotify.currentPlayback().receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                // Handle any errors that occur
+                if case .failure(let error) = completion {
+                    print("Error: \(error.localizedDescription)")
                 }
-            )
+            }, receiveValue: { currentlyPlayingContext in
+                guard let context = currentlyPlayingContext else {
+                    print("Nothing is currently playing.")
+                    return
+                }
+                
+                guard let playlistItem = context.item else {
+                    print("The playlist item is empty.")
+                    return
+                }
+                
+                switch playlistItem {
+                case .track(let track):
+                    self.recentTrack = track
+                case .episode(_):
+                    // TODO: handle podcast episodes?
+                    self.recentTrack = nil
+                }
+                
+            })
+            .store(in: &cancellables)
         
-        print("currentPlayback is \(currentPlayback)")
-        return nil
+        return currentTrack
     }
     
-    func receiveRecentlyPlayedCompletion(
-        _ completion: Subscribers.Completion<Error>
-    ) {
+    
+    func receiveRecentlyPlayedCompletion(_ completion: Subscribers.Completion<Error>) {
         if case .failure(let error) = completion {
             let title = "Couldn't retrieve recently played tracks"
             print("\(title): \(error)")
         }
     }
     
+    
+    /// Loads the first page. Called when this view appears.
+    func loadRecentlyPlayed() {
+        
+        print("loading first page")
+        
+        self.loadRecentlyPlayedCancellable = spotify
+            .recentlyPlayed(limit: 20)
+            .receive(on: RunLoop.main)
+            .sink(
+                receiveCompletion: self.receiveRecentlyPlayedCompletion(_:),
+                receiveValue: { playHistory in
+                    let tracks = playHistory.items.map(\.track)
+                    print(
+                        "received first page with \(tracks.count) items"
+                    )
+                    self.recentTrack = tracks[0]
+                }
+            )
+        
+    }
     
 }

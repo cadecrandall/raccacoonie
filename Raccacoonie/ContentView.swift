@@ -17,16 +17,29 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Raccacoonie!")
-            // TODO: This tends to open the redirect as a new window, not sure why.
             Link("Authorize Spotify Access", destination: viewModel.getAuthUrl())
-            Button("Get current track") { viewModel.getCurrentTrack() }
             
-            WidgetView(track: SpotifyWrapper.random())
+            if viewModel.isAuthorized {
+                
+                
+                VStack {
+                    HStack {
+                        Button("Get recent playback tracks") { viewModel.loadRecentlyPlayed() }
+                        Text("Recently played:")
+                    }
+                    HStack {
+                        Button("Get current track") { viewModel.getCurrentTrack() }
+                        Text("Current Track:")
+                        Text(viewModel.currentTrack.name)
+                    }
+                }
+                
+                WidgetView(track: SpotifyWrapper.random())
+            }
         }
         
         .padding()
         .onOpenURL(perform: viewModel.handleURL(_:))
     }
-    
     
 }
