@@ -20,21 +20,15 @@ struct ContentView: View {
             Link("Authorize Spotify Access", destination: viewModel.getAuthUrl())
             
             if viewModel.isAuthorized {
-                
-                
                 VStack {
                     HStack {
-                        Button("Get recent playback tracks") { viewModel.loadRecentlyPlayed() }
-                        Text("Recently played:")
-                    }
-                    HStack {
-                        Button("Get current track") { viewModel.getCurrentTrack() }
+                        Button("Update current track") { viewModel.updateCurrentTrack() }
                         Text("Current Track:")
                         Text(viewModel.currentTrack.name)
                     }
                 }
                 
-                WidgetView(track: SpotifyWrapper.random())
+                WidgetView(track: viewModel.currentTrack)
             }
         }
         

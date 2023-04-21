@@ -24,6 +24,7 @@ class ViewModel: ObservableObject {
     var authorizationState = String.randomURLSafe(length: 128)
     
     @Published var isAuthorized: Bool = false
+    
     @Published var currentTrack: CCCTrack = SpotifyWrapper.random()
     
     private var loadRecentlyPlayedCancellable: AnyCancellable? = nil
@@ -55,7 +56,14 @@ class ViewModel: ObservableObject {
                 return
             }
             
-            let cccAlbum = CCCAlbum(name: album.name, coverUrl: URL(string: "google.com")!, uri: album.uri!)
+            guard let albumImages = album.images else {
+                // TODO: what should happen if there are no album images?
+                return
+            }
+            
+            let cccAlbum = CCCAlbum(name: album.name,
+                                    coverUrl: albumImages[1].url,
+                                    uri: album.uri!)
             
             currentTrack = CCCTrack(name: trackName,
                                     artist: artists[0].name,
@@ -67,11 +75,6 @@ class ViewModel: ObservableObject {
     
     func getAuthUrl() -> URL {
         // from https://github.com/Peter-Schorn/SpotifyAPIExampleApp/blob/main/SpotifyAPIExampleApp/Model/Spotify.swift
-        
-        /// A cryptographically-secure random string used to ensure than an incoming
-        /// redirect from Spotify was the result of a request made by this app, and
-        /// not an attacker. **This value is regenerated after each authorization**
-        /// **process completes.**
         
         if authUrl != nil {
             return authUrl!
@@ -94,8 +97,6 @@ class ViewModel: ObservableObject {
     func handleURL(_ url: URL) {
         // from https://github.com/Peter-Schorn/SpotifyAPIExampleApp/blob/main/SpotifyAPIExampleApp/Model/Spotify.swift
         
-        // **Always** validate URLs; they offer a potential attack vector into
-        // your app.
         guard url.scheme == loginCallbackURL.scheme else {
             print("not handling URL: unexpected scheme: '\(url)'")
             return
@@ -113,51 +114,39 @@ class ViewModel: ObservableObject {
         )
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { completion in
-            
-            /*
-             After the access and refresh tokens are retrieved,
-             `SpotifyAPI.authorizationManagerDidChange` will emit a signal,
-             causing `Spotify.authorizationManagerDidChange()` to be called,
-             which will dismiss the loginView if the app was successfully
-             authorized by setting the @Published `Spotify.isAuthorized`
-             property to `true`.
-             
-             The only thing we need to do here is handle the error and show it
-             to the user if one was received.
-             */
             if case .failure(let error) = completion {
-                print("couldn't retrieve access and refresh tokens:\n\(error)")
+                print("Couldn't retrieve access and refresh tokens:\n\(error)")
+               
                 let alertTitle: String
                 let alertMessage: String
+                
                 if let authError = error as? SpotifyAuthorizationError,
                    authError.accessWasDenied {
-                    alertTitle = "You Denied The Authorization Request :("
+                    alertTitle = "You denied the authorization request. "
                     alertMessage = ""
-                }
-                else {
+                } else {
                     alertTitle =
-                    "Couldn't Authorization With Your Account"
+                    "Couldn't authorize your account."
                     alertMessage = error.localizedDescription
                 }
+                
                 print(alertTitle)
                 print(alertMessage)
             }
         })
         .store(in: &cancellables)
         
-        // MARK: IMPORTANT: generate a new value for the state parameter after
-        // MARK: each authorization request. This ensures an incoming redirect
-        // MARK: from Spotify was the result of a request made by this app, and
-        // MARK: and not an attacker.
         authorizationState = String.randomURLSafe(length: 128)
         
         isAuthorized = true
         
     }
     
-    func getCurrentTrack() -> CCCTrack? {
-        print("Called get current track")
-        
+    func updateCurrentTrack() {
+        /**
+         Makes a call to the Spotify API to fetch the currently played track. Updated internally by first setting the `Track recentTrack` to its value, which gets fixed by the didSet to conform to `CCCTrack
+         */
+        // TODO: Consider how to make this a little bit cleaner.
         spotify.currentPlayback().receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 // Handle any errors that occur
@@ -179,44 +168,12 @@ class ViewModel: ObservableObject {
                 case .track(let track):
                     self.recentTrack = track
                 case .episode(_):
-                    // TODO: handle podcast episodes?
+                    // TODO: handle podcast episodes.
                     self.recentTrack = nil
                 }
                 
             })
             .store(in: &cancellables)
-        
-        return currentTrack
-    }
-    
-    
-    func receiveRecentlyPlayedCompletion(_ completion: Subscribers.Completion<Error>) {
-        if case .failure(let error) = completion {
-            let title = "Couldn't retrieve recently played tracks"
-            print("\(title): \(error)")
-        }
-    }
-    
-    
-    /// Loads the first page. Called when this view appears.
-    func loadRecentlyPlayed() {
-        
-        print("loading first page")
-        
-        self.loadRecentlyPlayedCancellable = spotify
-            .recentlyPlayed(limit: 20)
-            .receive(on: RunLoop.main)
-            .sink(
-                receiveCompletion: self.receiveRecentlyPlayedCompletion(_:),
-                receiveValue: { playHistory in
-                    let tracks = playHistory.items.map(\.track)
-                    print(
-                        "received first page with \(tracks.count) items"
-                    )
-                    self.recentTrack = tracks[0]
-                }
-            )
-        
     }
     
 }
