@@ -134,13 +134,14 @@ class ViewModel: ObservableObject {
                 print(alertTitle)
                 print(alertMessage)
             }
+            
+            // update the authorization state inside this scope instead of the function scope so this is only updated once the authorization actually succeeds
+            self.updateCurrentTrack()
+            self.isAuthorized = true
         })
         .store(in: &cancellables)
         
         authorizationState = String.randomURLSafe(length: 128)
-        
-        isAuthorized = true
-        
     }
     
     func updateCurrentTrack() {
