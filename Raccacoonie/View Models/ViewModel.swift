@@ -87,7 +87,8 @@ class ViewModel: ObservableObject {
             scopes: [
                 .userReadPlaybackState,
                 .userReadRecentlyPlayed,
-                .userReadCurrentlyPlaying
+                .userReadCurrentlyPlaying,
+                .userModifyPlaybackState
             ]
         )!
         
@@ -175,5 +176,17 @@ class ViewModel: ObservableObject {
             })
             .store(in: &cancellables)
     }
+    
+    func pauseCurrentPlayback() {
+        spotify.pausePlayback().receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("Error: \(error.localizedDescription)")
+                }
+            })
+            .store(in: &cancellables)
+    }
+    
+
     
 }
