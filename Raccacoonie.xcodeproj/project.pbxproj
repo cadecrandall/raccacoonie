@@ -23,6 +23,7 @@
 		0C42BDBF29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDBE29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift */; };
 		0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A329E50B650048C761 /* ViewModel.swift */; };
 		0C4A66A629E50C990048C761 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A529E50C990048C761 /* ImageView.swift */; };
+		0C5E3F4D29F4669100200D91 /* CCCPlaybackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E3F4C29F4669100200D91 /* CCCPlaybackError.swift */; };
 		0C70B94C29ECBAE300483322 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C70B94B29ECBAE300483322 /* SpotifyAPI */; };
 		0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* CCCTrack.swift */; };
 		0C70B95129ECF1C500483322 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
@@ -89,6 +90,7 @@
 		0C42BDBE29DCAF9B00BA0ADB /* RaccacoonieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0C4A66A329E50B650048C761 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0C4A66A529E50C990048C761 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		0C5E3F4C29F4669100200D91 /* CCCPlaybackError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCPlaybackError.swift; sourceTree = "<group>"; };
 		0C70B94D29ECC4A100483322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0C70B94E29ECD56A00483322 /* CCCTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCTrack.swift; sourceTree = "<group>"; };
 		0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWrapper.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				0C70B94E29ECD56A00483322 /* CCCTrack.swift */,
 				0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */,
 				0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */,
+				0C5E3F4C29F4669100200D91 /* CCCPlaybackError.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C70B95129ECF1C500483322 /* SpotifyWrapper.swift in Sources */,
+				0C5E3F4D29F4669100200D91 /* CCCPlaybackError.swift in Sources */,
 				0C4A66A629E50C990048C761 /* ImageView.swift in Sources */,
 				0C93C6B829DF9B1400C0BE6B /* Chance.intentdefinition in Sources */,
 				0C144A1129EDB0CF005F4747 /* CCCAlbum.swift in Sources */,

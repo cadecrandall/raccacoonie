@@ -27,8 +27,11 @@ class ViewModel: ObservableObject {
     
     @Published var currentTrack: CCCTrack = SpotifyWrapper.random()
     
+    @Published var isPlaying: Bool = false
+    
     private var loadRecentlyPlayedCancellable: AnyCancellable? = nil
     
+    // TODO: when should the cancellables be purged?
     private var cancellables: Set<AnyCancellable> = []
     
     private var authUrl: URL? = nil
@@ -117,7 +120,7 @@ class ViewModel: ObservableObject {
         .sink(receiveCompletion: { completion in
             if case .failure(let error) = completion {
                 print("Couldn't retrieve access and refresh tokens:\n\(error)")
-               
+                
                 let alertTitle: String
                 let alertMessage: String
                 
@@ -136,19 +139,22 @@ class ViewModel: ObservableObject {
             }
             
             // update the authorization state inside this scope instead of the function scope so this is only updated once the authorization actually succeeds
-            self.updateCurrentTrack()
+            self.updatePlayback()
             self.isAuthorized = true
         })
         .store(in: &cancellables)
         
         authorizationState = String.randomURLSafe(length: 128)
+        
+        isAuthorized = true
     }
     
-    func updateCurrentTrack() {
+    func updatePlayback() {
         /**
          Makes a call to the Spotify API to fetch the currently played track. Updated internally by first setting the `Track recentTrack` to its value, which gets fixed by the didSet to conform to `CCCTrack
          */
         // TODO: Consider how to make this a little bit cleaner.
+        
         spotify.currentPlayback().receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
                 // Handle any errors that occur
@@ -179,15 +185,30 @@ class ViewModel: ObservableObject {
     }
     
     func pauseCurrentPlayback() {
-        spotify.pausePlayback().receive(on: RunLoop.main)
-            .sink(receiveCompletion: { completion in
-                if case .failure(let error) = completion {
-                    print("Error: \(error.localizedDescription)")
-                }
-            })
-            .store(in: &cancellables)
+        // TODO: this breaks when you give input through the regular Spotify app or through the web UI
+        self.updatePlayback()
+        if self.isPlaying {
+            print("Pausing playback...")
+            spotify.pausePlayback().receive(on: RunLoop.main)
+                .sink(receiveCompletion: { completion in
+                    if case .failure(let error) = completion {
+                        print("Error Pausing Playback: \(error.localizedDescription)")
+                    }
+                })
+                .store(in: &cancellables)
+        } else {
+            print("Resuming playback...")
+            spotify.resumePlayback().receive(on: RunLoop.main)
+                .sink(receiveCompletion: { completion in
+                    if case .failure(let error) = completion {
+                        print("Error Resuming Playback: \(error.localizedDescription)")
+                    }
+                })
+                .store(in: &cancellables)
+        }
+        
+        self.isPlaying = !self.isPlaying
+        
     }
-    
-
     
 }

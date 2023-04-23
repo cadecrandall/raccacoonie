@@ -22,7 +22,7 @@ struct ContentView: View {
                 Link("Authorize Spotify Access", destination: viewModel.getAuthUrl())
             } else {
                 VStack {
-                    Button("Update current track") { viewModel.updateCurrentTrack() }
+                    Button("Update current track") { viewModel.updatePlayback() }
                     HStack {
                         Button("Back") {}
                         Button("Play/Pause") { viewModel.pauseCurrentPlayback() }
@@ -30,6 +30,7 @@ struct ContentView: View {
                     }
                     WidgetView(track: viewModel.currentTrack)
                 }
+                Text("isPlaying: \(String(viewModel.isPlaying))")
             }
         }
         
