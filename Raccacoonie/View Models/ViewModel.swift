@@ -153,7 +153,6 @@ class ViewModel: ObservableObject {
         /**
          Makes a call to the Spotify API to fetch the currently played track. Updated internally by first setting the `Track recentTrack` to its value, which gets fixed by the didSet to conform to `CCCTrack
          */
-        // TODO: Consider how to make this a little bit cleaner.
         
         spotify.currentPlayback().receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
@@ -209,6 +208,28 @@ class ViewModel: ObservableObject {
         
         self.isPlaying = !self.isPlaying
         
+    }
+    
+    func skipPlayback() {
+        spotify.skipToNext().receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("Error Pausing Playback: \(error.localizedDescription)")
+                }
+                self.updatePlayback()
+            })
+            .store(in: &cancellables)
+    }
+    
+    func skipToPreviousPlayback() {
+        spotify.skipToPrevious().receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("Error Pausing Playback: \(error.localizedDescription)")
+                }
+                self.updatePlayback()
+            })
+            .store(in: &cancellables)
     }
     
 }

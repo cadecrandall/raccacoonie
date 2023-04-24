@@ -24,9 +24,9 @@ struct ContentView: View {
                 VStack {
                     Button("Update current track") { viewModel.updatePlayback() }
                     HStack {
-                        Button("Back") {}
+                        Button("Back") { viewModel.skipToPreviousPlayback() }
                         Button("Play/Pause") { viewModel.pauseCurrentPlayback() }
-                        Button("Forward") {}
+                        Button("Forward") { viewModel.skipPlayback() }
                     }
                     WidgetView(track: viewModel.currentTrack)
                 }
