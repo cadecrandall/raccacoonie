@@ -65,7 +65,7 @@ class ViewModel: ObservableObject {
             }
             
             let cccAlbum = CCCAlbum(name: album.name,
-                                    coverUrl: albumImages[1].url,
+                                    coverUrl: albumImages[0].url,
                                     uri: album.uri!)
             
             currentTrack = CCCTrack(name: trackName,

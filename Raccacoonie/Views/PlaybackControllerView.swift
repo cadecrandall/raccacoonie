@@ -12,18 +12,18 @@ struct PlaybackControllerView: View {
     
     var body: some View {
         HStack {
-            Button(action: { viewModel.skipToPreviousPlayback() }) {
-                Image(systemName: "backward.fill")
-                    .foregroundColor(.blue)
-            }
-            Button(action: { viewModel.pauseCurrentPlayback() }) {
-                Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
-                    .foregroundColor(.blue)
-            }
-            Button(action: { viewModel.skipPlayback() }) {
-                Image(systemName: "forward.fill")
-                    .foregroundColor(.blue)
-            }
+            Image(systemName: "backward.fill")
+                .font(.system(size: 20))
+                .foregroundColor(.blue)
+                .onTapGesture { viewModel.skipToPreviousPlayback() }
+            Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
+                .font(.system(size: viewModel.isPlaying ? 32 : 30))
+                .foregroundColor(.blue)
+                .onTapGesture { viewModel.pauseCurrentPlayback() }
+            Image(systemName: "forward.fill")
+                .font(.system(size: 20))
+                .foregroundColor(.blue)
+                .onTapGesture { viewModel.skipPlayback() }
         }
     }
 }
