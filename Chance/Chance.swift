@@ -46,7 +46,7 @@ struct ChanceEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        WidgetView(track: entry.track)
+        TrackView(track: entry.track)
     }
 }
 

@@ -11,9 +11,9 @@
 		0C144A1229EDB339005F4747 /* CCCTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* CCCTrack.swift */; };
 		0C144A1329EDB33B005F4747 /* CCCAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */; };
 		0C144A1429EDB33E005F4747 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
-		0C144A1729EDB3BD005F4747 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* WidgetView.swift */; };
+		0C144A1729EDB3BD005F4747 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* TrackView.swift */; };
 		0C144A1829EDB493005F4747 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A66A529E50C990048C761 /* ImageView.swift */; };
-		0C144A1C29EDC4EE005F4747 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* WidgetView.swift */; };
+		0C144A1C29EDC4EE005F4747 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C144A1529EDB3B6005F4747 /* TrackView.swift */; };
 		0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */; };
 		0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */; };
 		0C42BDA529DCAF9B00BA0ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C42BDA429DCAF9B00BA0ADB /* Assets.xcassets */; };
@@ -27,6 +27,7 @@
 		0C70B94C29ECBAE300483322 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C70B94B29ECBAE300483322 /* SpotifyAPI */; };
 		0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* CCCTrack.swift */; };
 		0C70B95129ECF1C500483322 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
+		0C92710529F71E44004F824D /* Marquee in Frameworks */ = {isa = PBXBuildFile; productRef = 0C92710429F71E44004F824D /* Marquee */; };
 		0C93C6AC29DF9B1300C0BE6B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C93C6AB29DF9B1200C0BE6B /* WidgetKit.framework */; };
 		0C93C6AE29DF9B1300C0BE6B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C93C6AD29DF9B1300C0BE6B /* SwiftUI.framework */; };
 		0C93C6B129DF9B1300C0BE6B /* Chance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C6B029DF9B1300C0BE6B /* Chance.swift */; };
@@ -34,6 +35,7 @@
 		0C93C6B729DF9B1400C0BE6B /* Chance.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C6B229DF9B1300C0BE6B /* Chance.intentdefinition */; };
 		0C93C6B829DF9B1400C0BE6B /* Chance.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0C93C6B229DF9B1300C0BE6B /* Chance.intentdefinition */; };
 		0C93C6BB29DF9B1400C0BE6B /* ChanceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0C93C6A929DF9B1200C0BE6B /* ChanceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0CA5478629F7214100EFAFD2 /* PlaybackControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5478529F7214100EFAFD2 /* PlaybackControllerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +78,7 @@
 
 /* Begin PBXFileReference section */
 		0C144A1029EDB0CF005F4747 /* CCCAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCAlbum.swift; sourceTree = "<group>"; };
-		0C144A1529EDB3B6005F4747 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		0C144A1529EDB3B6005F4747 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		0C42BD9D29DCAF9A00BA0ADB /* Raccacoonie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raccacoonie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C42BDA029DCAF9A00BA0ADB /* RaccacoonieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaccacoonieApp.swift; sourceTree = "<group>"; };
 		0C42BDA229DCAF9A00BA0ADB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		0C93C6B329DF9B1400C0BE6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C93C6B529DF9B1400C0BE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C93C6B629DF9B1400C0BE6B /* Chance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chance.entitlements; sourceTree = "<group>"; };
+		0CA5478529F7214100EFAFD2 /* PlaybackControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControllerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C70B94C29ECBAE300483322 /* SpotifyAPI in Frameworks */,
+				0C92710529F71E44004F824D /* Marquee in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +221,9 @@
 		0C4A66A129E50B200048C761 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C144A1529EDB3B6005F4747 /* TrackView.swift */,
 				0C4A66A529E50C990048C761 /* ImageView.swift */,
+				0CA5478529F7214100EFAFD2 /* PlaybackControllerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				0C93C6B029DF9B1300C0BE6B /* Chance.swift */,
-				0C144A1529EDB3B6005F4747 /* WidgetView.swift */,
 				0C93C6B229DF9B1300C0BE6B /* Chance.intentdefinition */,
 				0C93C6B329DF9B1400C0BE6B /* Assets.xcassets */,
 				0C93C6B529DF9B1400C0BE6B /* Info.plist */,
@@ -272,6 +277,7 @@
 			name = Raccacoonie;
 			packageProductDependencies = (
 				0C70B94B29ECBAE300483322 /* SpotifyAPI */,
+				0C92710429F71E44004F824D /* Marquee */,
 			);
 			productName = Raccacoonie;
 			productReference = 0C42BD9D29DCAF9A00BA0ADB /* Raccacoonie.app */;
@@ -367,6 +373,7 @@
 			mainGroup = 0C42BD9429DCAF9A00BA0ADB;
 			packageReferences = (
 				0C70B94A29ECBAE300483322 /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
+				0C92710329F71E44004F824D /* XCRemoteSwiftPackageReference "Marquee" */,
 			);
 			productRefGroup = 0C42BD9E29DCAF9A00BA0ADB /* Products */;
 			projectDirPath = "";
@@ -424,9 +431,10 @@
 				0C4A66A629E50C990048C761 /* ImageView.swift in Sources */,
 				0C93C6B829DF9B1400C0BE6B /* Chance.intentdefinition in Sources */,
 				0C144A1129EDB0CF005F4747 /* CCCAlbum.swift in Sources */,
+				0CA5478629F7214100EFAFD2 /* PlaybackControllerView.swift in Sources */,
 				0C42BDA329DCAF9A00BA0ADB /* ContentView.swift in Sources */,
 				0C4A66A429E50B650048C761 /* ViewModel.swift in Sources */,
-				0C144A1C29EDC4EE005F4747 /* WidgetView.swift in Sources */,
+				0C144A1C29EDC4EE005F4747 /* TrackView.swift in Sources */,
 				0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */,
 				0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */,
 			);
@@ -453,7 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C144A1729EDB3BD005F4747 /* WidgetView.swift in Sources */,
+				0C144A1729EDB3BD005F4747 /* TrackView.swift in Sources */,
 				0C93C6B729DF9B1400C0BE6B /* Chance.intentdefinition in Sources */,
 				0C93C6B129DF9B1300C0BE6B /* Chance.swift in Sources */,
 				0C144A1229EDB339005F4747 /* CCCTrack.swift in Sources */,
@@ -846,6 +854,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		0C92710329F71E44004F824D /* XCRemoteSwiftPackageReference "Marquee" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIKit/Marquee";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -853,6 +869,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C70B94A29ECBAE300483322 /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
 			productName = SpotifyAPI;
+		};
+		0C92710429F71E44004F824D /* Marquee */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C92710329F71E44004F824D /* XCRemoteSwiftPackageReference "Marquee" */;
+			productName = Marquee;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

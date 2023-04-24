@@ -17,23 +17,22 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Raccacoonie!")
+                .font(.title)
             
             if !viewModel.isAuthorized {
                 Link("Authorize Spotify Access", destination: viewModel.getAuthUrl())
             } else {
                 VStack {
-                    Button("Update current track") { viewModel.updatePlayback() }
-                    HStack {
-                        Button("Back") { viewModel.skipToPreviousPlayback() }
-                        Button("Play/Pause") { viewModel.pauseCurrentPlayback() }
-                        Button("Forward") { viewModel.skipPlayback() }
-                    }
-                    WidgetView(track: viewModel.currentTrack)
+                    Button("Debug: Update current track") { viewModel.updatePlayback() }
+                    TrackView(track: viewModel.currentTrack)
+                    PlaybackControllerView(viewModel: viewModel)
                 }
-                Text("isPlaying: \(String(viewModel.isPlaying))")
+                .padding()
+                .background(Color.white)
+                .cornerRadius(20)
+                .shadow(radius: 10)
             }
         }
-        
         .padding()
         .onOpenURL(perform: viewModel.handleURL(_:))
     }
