@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ImageView: View {
+struct AlbumView: View {
     
-    let imageUrl: URL
+    let track: CCCTrack
     
     var body: some View {
-        AsyncImage(url: imageUrl) { image in 
+        AsyncImage(url: track.album.coverUrl) { image in
             image.resizable().frame(width: 300.0, height: 300.0)
         } placeholder: {
             ProgressView()

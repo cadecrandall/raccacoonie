@@ -23,8 +23,17 @@ struct ContentView: View {
                 Link("Authorize Spotify Access", destination: viewModel.getAuthUrl())
             } else {
                 VStack {
-                    Button("Debug: Update current track") { viewModel.updatePlayback() }
+                    Image(systemName: "arrow.clockwise")
+                        .font(.system(size: 20))
+                        .foregroundColor(.blue)
+                        .onTapGesture { viewModel.updatePlayback() }
+                    
                     TrackView(track: viewModel.currentTrack)
+                    
+                    AlbumView(track: viewModel.currentTrack)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(20)
+                    
                     PlaybackControllerView(viewModel: viewModel)
                 }
                 .padding()

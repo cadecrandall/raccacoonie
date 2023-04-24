@@ -21,10 +21,6 @@ struct TrackView: View {
             // TODO: add marquee effect when the text overflows? 
             Text("\(track.album.name) by \(track.artist)")
                 .foregroundColor(.gray)
-            
-            ImageView(imageUrl: track.album.coverUrl)
-                .aspectRatio(contentMode: .fit)
-                .padding(20)
         }
     }
 }

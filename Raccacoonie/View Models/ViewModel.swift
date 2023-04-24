@@ -27,7 +27,7 @@ class ViewModel: ObservableObject {
     
     @Published var currentTrack: CCCTrack = SpotifyWrapper.random()
     
-    @Published var isPlaying: Bool = false
+    @Published var isPlaying: Bool = true
     
     private var loadRecentlyPlayedCancellable: AnyCancellable? = nil
     
@@ -217,6 +217,7 @@ class ViewModel: ObservableObject {
                     print("Error Pausing Playback: \(error.localizedDescription)")
                 }
                 self.updatePlayback()
+                self.isPlaying = true
             })
             .store(in: &cancellables)
     }
@@ -228,6 +229,7 @@ class ViewModel: ObservableObject {
                     print("Error Pausing Playback: \(error.localizedDescription)")
                 }
                 self.updatePlayback()
+                self.isPlaying = true
             })
             .store(in: &cancellables)
     }
