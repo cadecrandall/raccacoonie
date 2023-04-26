@@ -12,7 +12,7 @@ import AppKit
 
 struct ContentView: View {
     
-    @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         VStack {

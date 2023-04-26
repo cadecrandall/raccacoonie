@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct CCCTrack {
+struct CCCTrack: CustomStringConvertible {
     let name: String
     let artist: String
     let album: CCCAlbum
     let uri: String?
     let id = UUID()
     
-
+    var description: String {
+        return "CCCTrack: {\(name) by \(artist) on album \(album)}"
+    }
 }
 

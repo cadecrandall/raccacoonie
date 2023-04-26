@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct CCCAlbum {
+struct CCCAlbum: CustomStringConvertible {
     let name: String
     let coverUrl: URL
     let uri: String
     let id = UUID()
+    
+    var description: String {
+        return "CCCAlbum: {\(name)}"
+    }
 }
