@@ -24,6 +24,6 @@ struct RaccacoonieApp: App {
         
         MenuBarExtra("Raccacoonie", systemImage: "music.note.house.fill") {
             MenuBarView(viewModel: viewModel)
-        }
+        }.menuBarExtraStyle(.window)
     }
 }
