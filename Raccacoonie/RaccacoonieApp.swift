@@ -27,10 +27,22 @@ struct RaccacoonieApp: App {
                 TrackView(track: viewModel.currentTrack)
                 
                 AlbumView(track: viewModel.currentTrack)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(20)
                 
-                PlaybackControllerView(viewModel: viewModel)
+                Button("Previous") {
+                    viewModel.skipToPreviousPlayback()
+                }.keyboardShortcut("1")
+                
+                Button(viewModel.isPlaying ? "Pause" : "Play") {
+                    viewModel.skipToPreviousPlayback()
+                }.keyboardShortcut("2")
+                
+                Button("Next") {
+                    viewModel.skipPlayback()
+                }.keyboardShortcut("3")
+                
+                Button("Refresh App") {
+                    viewModel.updatePlayback()
+                }.keyboardShortcut("R")
             }
         }
     }

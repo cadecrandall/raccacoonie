@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrackView: View {
-    // TODO: Style this view to be prettier!
     let track: CCCTrack
     
     var body: some View {
