@@ -19,6 +19,7 @@
 		0C70B94C29ECBAE300483322 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 0C70B94B29ECBAE300483322 /* SpotifyAPI */; };
 		0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B94E29ECD56A00483322 /* CCCTrack.swift */; };
 		0C70B95129ECF1C500483322 /* SpotifyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */; };
+		0C7D9C7129F9C0A700B869F8 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D9C7029F9C0A700B869F8 /* MenuBarView.swift */; };
 		0CA5478629F7214100EFAFD2 /* PlaybackControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5478529F7214100EFAFD2 /* PlaybackControllerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		0C70B94D29ECC4A100483322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0C70B94E29ECD56A00483322 /* CCCTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCCTrack.swift; sourceTree = "<group>"; };
 		0C70B95029ECF1C500483322 /* SpotifyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyWrapper.swift; sourceTree = "<group>"; };
+		0C7D9C7029F9C0A700B869F8 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		0C93C6AB29DF9B1200C0BE6B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0C93C6AD29DF9B1300C0BE6B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		0CA5478529F7214100EFAFD2 /* PlaybackControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControllerView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				0C144A1529EDB3B6005F4747 /* TrackView.swift */,
 				0C4A66A529E50C990048C761 /* AlbumView.swift */,
 				0CA5478529F7214100EFAFD2 /* PlaybackControllerView.swift */,
+				0C7D9C7029F9C0A700B869F8 /* MenuBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				0C144A1C29EDC4EE005F4747 /* TrackView.swift in Sources */,
 				0C42BDA129DCAF9A00BA0ADB /* RaccacoonieApp.swift in Sources */,
 				0C70B94F29ECD56A00483322 /* CCCTrack.swift in Sources */,
+				0C7D9C7129F9C0A700B869F8 /* MenuBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

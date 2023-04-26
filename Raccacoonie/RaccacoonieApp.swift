@@ -23,27 +23,7 @@ struct RaccacoonieApp: App {
         
         
         MenuBarExtra("Raccacoonie", systemImage: "music.note.house.fill") {
-            VStack {
-                TrackView(track: viewModel.currentTrack)
-                
-                AlbumView(track: viewModel.currentTrack)
-                
-                Button("Previous") {
-                    viewModel.skipToPreviousPlayback()
-                }.keyboardShortcut("1")
-                
-                Button(viewModel.isPlaying ? "Pause" : "Play") {
-                    viewModel.skipToPreviousPlayback()
-                }.keyboardShortcut("2")
-                
-                Button("Next") {
-                    viewModel.skipPlayback()
-                }.keyboardShortcut("3")
-                
-                Button("Refresh App") {
-                    viewModel.updatePlayback()
-                }.keyboardShortcut("R")
-            }
+            MenuBarView(viewModel: viewModel)
         }
     }
 }
