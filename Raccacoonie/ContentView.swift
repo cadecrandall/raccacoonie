@@ -11,6 +11,12 @@ import AppKit
 
 
 struct ContentView: View {
+    // TODO use @AppStorage for persistence?
+    /**
+     
+     @AppStorage var key = "12345"
+     can access it throughout the application 
+     */
     
     @StateObject var viewModel: ViewModel
     

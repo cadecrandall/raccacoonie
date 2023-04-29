@@ -17,23 +17,17 @@ struct MenuBarView: View {
                 .foregroundColor(.blue)
                 .foregroundStyle(.ultraThickMaterial)
             
-            
-            
             Text("\(viewModel.currentTrack.album.name) by \(viewModel.currentTrack.artist)")
                 .foregroundColor(.black)
             
             Divider()
             
-
-                AsyncImage(url: viewModel.currentTrack.album.coverUrl) { image in
-                    image.resizable().frame(width: 300.0, height: 300.0)
-                } placeholder: {
-                    ProgressView()
-                }
-
+            AsyncImage(url: viewModel.currentTrack.album.coverUrl) { image in
+                image.resizable().frame(width: 300.0, height: 300.0)
+            } placeholder: {
+                ProgressView()
+            }.padding(.bottom)
             
-            
-            Divider()
             
             HStack {
                 Button(action: {viewModel.skipToPreviousPlayback()}, label: {
@@ -53,14 +47,13 @@ struct MenuBarView: View {
                         .labelStyle(.iconOnly)
                         .frame(maxWidth: .infinity)
                 }).buttonStyle(.plain)
-            }
+            }.padding(.bottom)
             
-            Divider()
             
             Button("Refresh App") {
                 viewModel.updatePlayback()
             }.keyboardShortcut("R")
             
-        }.background(.ultraThinMaterial)
+        }.padding(15)
     }
 }

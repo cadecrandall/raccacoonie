@@ -8,6 +8,7 @@
 import Foundation
 import SpotifyWebAPI
 import Combine
+import SwiftUI
 
 class ViewModel: ObservableObject {
     
@@ -21,7 +22,7 @@ class ViewModel: ObservableObject {
         string: "raccacoonie://login-callback"
     )!
     
-    var authorizationState = String.randomURLSafe(length: 128)
+    @AppStorage("authorizationState") var authorizationState = String.randomURLSafe(length: 128)
     
     @Published var isAuthorized: Bool = false
     
@@ -72,6 +73,40 @@ class ViewModel: ObservableObject {
                                     artist: artists[0].name,
                                     album: cccAlbum,
                                     uri: uri)
+            print(currentTrack)
+        }
+    }
+    
+    private var recentEpisode: Episode? = nil {
+        didSet {
+            guard let recentEpisode else {
+                return
+            }
+            
+            let episodeName = recentEpisode.name
+            let show = recentEpisode.show
+            
+            guard let show else {
+                return
+            }
+            
+            let podcastName = show.name
+            
+            let episodeImage = recentEpisode.images?[0]
+            
+            guard let episodeImage else {
+                return
+            }
+                        
+            let cccAlbum = CCCAlbum(name: podcastName,
+                                    coverUrl: episodeImage.url,
+                                    uri: show.uri)
+            
+            currentTrack = CCCTrack(name: episodeName,
+                                    artist: show.name,
+                                    album: cccAlbum,
+                                    uri: recentEpisode.uri)
+            
             print(currentTrack)
         }
     }
@@ -174,9 +209,11 @@ class ViewModel: ObservableObject {
                 switch playlistItem {
                 case .track(let track):
                     self.recentTrack = track
-                case .episode(_):
+                    self.recentEpisode = nil
+                case .episode(let episode):
                     // TODO: handle podcast episodes.
                     self.recentTrack = nil
+                    self.recentEpisode = episode
                 }
                 
             })
