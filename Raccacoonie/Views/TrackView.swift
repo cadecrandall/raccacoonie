@@ -17,7 +17,6 @@ struct TrackView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.blue)
             
-            // TODO: add marquee effect when the text overflows? 
             Text("\(track.album.name) by \(track.artist)")
                 .foregroundColor(.gray)
         }

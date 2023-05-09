@@ -22,7 +22,7 @@ class ViewModel: ObservableObject {
         string: "raccacoonie://login-callback"
     )!
     
-    @AppStorage("authorizationState") var authorizationState = String.randomURLSafe(length: 128)
+    @AppStorage("authorizationState") var authorizationState: String?
     
     @Published var isAuthorized: Bool = false
     
@@ -36,6 +36,14 @@ class ViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
     private var authUrl: URL? = nil
+    
+    
+    init() {
+        guard let authorizationState else {
+            authorizationState = String.randomURLSafe(length: 128)
+            return
+        }
+    }
     
     private var recentTrack: Track? = nil {
         didSet {
@@ -184,6 +192,10 @@ class ViewModel: ObservableObject {
         isAuthorized = true
     }
     
+    func signOut() {
+        
+    }
+    
     func updatePlayback() {
         /**
          Makes a call to the Spotify API to fetch the currently played track. Updated internally by first setting the `Track recentTrack` to its value, which gets fixed by the didSet to conform to `CCCTrack
@@ -211,7 +223,6 @@ class ViewModel: ObservableObject {
                     self.recentTrack = track
                     self.recentEpisode = nil
                 case .episode(let episode):
-                    // TODO: handle podcast episodes.
                     self.recentTrack = nil
                     self.recentEpisode = episode
                 }
@@ -221,7 +232,7 @@ class ViewModel: ObservableObject {
     }
     
     func pauseCurrentPlayback() {
-        // TODO: this breaks when you give input through the regular Spotify app or through the web UI
+        // TODO: this gets out of sync when you give input through the regular Spotify app or through the web UI
         self.updatePlayback()
         if self.isPlaying {
             print("Pausing playback...")

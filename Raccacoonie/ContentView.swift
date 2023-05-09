@@ -41,6 +41,8 @@ struct ContentView: View {
                         .padding(20)
                     
                     PlaybackControllerView(viewModel: viewModel)
+                    
+//                    Button("Sign Out") { viewModel.signOut() }
                 }
                 .padding()
                 .background(Color.white)
